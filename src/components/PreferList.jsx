@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import Job from "./Job";
 
 const PreferList = () => {
-  const jobFavorites = useSelector((state) => state.jobFavorites.content);
-  console.log(jobFavorites);
+  const favoriteList = useSelector((state) => state.favoriteList.content);
+  console.log(favoriteList);
   return (
     <Container>
       <h1 className="text-center">Prefer List</h1>
@@ -13,7 +13,7 @@ const PreferList = () => {
         <Button>go search</Button>
       </Link>
       <>
-        {jobFavorites.map((jobData) => (
+        {favoriteList.map((jobData) => (
           <Job key={jobData._id} data={jobData} />
         ))}
       </>

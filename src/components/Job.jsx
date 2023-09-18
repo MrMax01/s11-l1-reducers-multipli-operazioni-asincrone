@@ -5,7 +5,7 @@ import { ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE } from "../redux/actions";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
-  const jobFavorites = useSelector((state) => state.jobFavorites.content);
+  const favoriteList = useSelector((state) => state.favoriteList.content);
 
   return (
     <Row className="mx-0 mt-3 p-3" style={{ border: "1px solid #00000033", borderRadius: 4 }}>
@@ -18,7 +18,7 @@ const Job = ({ data }) => {
         </a>
       </Col>
       <Col xs={1} className="text-end">
-        {jobFavorites.some((element) => element._id === data._id) ? (
+        {favoriteList.some((element) => element._id === data._id) ? (
           <Button
             variant="danger"
             onClick={() => {

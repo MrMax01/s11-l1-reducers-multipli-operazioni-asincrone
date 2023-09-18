@@ -4,6 +4,7 @@ import favoriteJobReducer from "../reducer/favoriteJobReducer";
 const rootReducer = combineReducers({
   favoriteList: favoriteJobReducer,
 });
-export default configureStore({
+const store = configureStore({
   reducer: rootReducer,
 });
+export default store;

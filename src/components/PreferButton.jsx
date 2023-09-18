@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const PreferButton = () => {
-  const count = useSelector((state) => state.jobFavorites.content.length);
+  const count = useSelector((state) => state.favoriteList.content.length);
 
   return (
     <Container className="mt-5 text-end">
