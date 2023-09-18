@@ -1,6 +1,7 @@
 import { Row, Col, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE } from "../redux/actions";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Job = ({ data }) => {
           <Button
             variant="danger"
             onClick={() => {
-              dispatch({ type: "REMOVE_TO_FAVORITE", payload: data });
+              dispatch({ type: REMOVE_FROM_FAVORITE, payload: data });
               console.log(data);
             }}
           >
@@ -31,7 +32,7 @@ const Job = ({ data }) => {
           <Button
             variant="danger"
             onClick={() => {
-              dispatch({ type: "ADD_TO_FAVORITE", payload: data });
+              dispatch({ type: ADD_TO_FAVORITE, payload: data });
             }}
           >
             <i className="bi bi-heart"></i>
