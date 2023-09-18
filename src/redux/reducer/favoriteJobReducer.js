@@ -13,17 +13,15 @@ const favoriteJobReducer = (state = initialState, action) => {
     case ADD_TO_FAVORITE:
       return {
         ...state,
-        jobFavorites: {
-          content: [...state.content, action.payload],
-        },
+
+        content: [...state.content, action.payload],
       };
 
     case REMOVE_FROM_FAVORITE:
       return {
         ...state,
-        contet: {
-          content: state.content.filter((elem) => elem._id !== action.payload._id),
-        },
+
+        content: state.content.filter((elem) => elem._id !== action.payload._id),
       };
 
     default:
